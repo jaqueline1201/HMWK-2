@@ -4,6 +4,7 @@ h1 {
     font-size: 100px;
     font-style: normal; 
     text-align: center;
+    text-shadow: 2px 2px 5px gray;
 }
 
 .btn {
@@ -12,7 +13,7 @@ h1 {
     font-size: 20px;
     font-style: normal;
     border-radius: 8px;
-    margin: 2px;
+    margin: 10px;
     width: 20%;
     transition: duration 0.04s;
 }
@@ -20,6 +21,7 @@ h1 {
 .btn:hover {
     background-color: black;
     color: whitesmoke;
+    transform: scale(1.2);
 }
 
 #btnsarea {
