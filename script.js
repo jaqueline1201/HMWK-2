@@ -38,11 +38,20 @@ function renderList (workingArray) {
 
    renderList(userWordsCaps);
 }
+
+
+
 function btnSwap () {
     const userWordsSwap = userWords.map(function (wordByUser) {
-        let swapWord = wordByUser
-    }
-    )
+        let swapWord = wordByUser.charAt(wordByUser.length - 1)+ wordByUser.substring(1,wordByUser.length -1 ) + wordByUser.charAt(0);
+        return swapWord;
+    })
+    console.log(userWordsSwap);
+    let wordList = document.getElementById("wordList");
+    wordList.innerHTML = "";
+
+   renderList(userWordsSwap);
+
 }
 
 
