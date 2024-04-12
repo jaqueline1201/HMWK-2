@@ -9,3 +9,5 @@ while (userWords.length < 3) {
         userWords.push(word);
     }
 }
+
+
