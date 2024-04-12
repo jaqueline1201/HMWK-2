@@ -10,20 +10,24 @@ while (userWords.length < 3) {
     }
 }
 
-userWords.forEach(function (value) {
-    console.log(value);
-    const wordListItem = document.createElement("li");
-    const wordList = document.getElementById("wordList");
-    const textNode = document.createTextNode(value);
+renderList(userWords);
+// The forEach() method calls a function for each element in an array.//
+function renderList (workingArray) {
+    workingArray.forEach(function (value) {
+        console.log(value);
+        const wordListItem = document.createElement("li");
+        const wordList = document.getElementById("wordList");
+        const textNode = document.createTextNode(value);
 
-    wordListItem.appendChild(textNode);
-    wordList.appendChild(wordListItem);
-});
-
+        wordListItem.appendChild(textNode);
+        wordList.appendChild(wordListItem);
+    });
+}
  const contentPage = document.getElementById("wrapper");
  contentPage.classList.remove("hidden");
 
-function btnCaps() {
+//map() creates a new array from calling a function for every array element.//
+ function btnCaps() {
     const userWordsCaps = userWords.map(function (wordByUser) {
         let capsWord = wordByUser.toUpperCase();
         return capsWord; 
@@ -32,19 +36,21 @@ function btnCaps() {
     let wordList = document.getElementById("wordList");
     wordList.innerHTML = "";
 
-    userWordsCaps.forEach(function (capsValue){
-        const capsNode = document.createTextNode(capsValue);
-        const wordListItem = document.createElement("li");
-        const wordList = document.getElementById("wordList");
-        
-        wordListItem.appendChild(capsNode);
-        wordList.appendChild(wordListItem);
-    });
+   renderList(userWordsCaps);
+}
+function btnSwap () {
+    const userWordsSwap = userWords.map(function (wordByUser) {
+        let swapWord = wordByUser
+    }
+    )
 }
 
-function btnRed() {
-    const userWordRed = user
-}
+
+
+
+
+
+
 
 
 
